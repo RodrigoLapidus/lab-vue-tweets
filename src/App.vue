@@ -1,6 +1,7 @@
 <template>
-  <div class="app">
-    <Tweet />
+  
+  <div class="app" v-for="(tweet, index) in tweets" :key="index">
+    <Tweet :tweet="tweet" />
   </div>
 </template>
 
@@ -40,7 +41,16 @@ export default {
             },
         ]
     }),
-    components: { Tweet }
+    components: { Tweet },
+
+    methods: {
+
+    },
+
+    computed: {
+    }
+      
+    
 }
 </script>
 
